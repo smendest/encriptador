@@ -2,5 +2,5 @@
 
 Steps to follow:
 
-- [] 1. Create basic project structure.
+- [ ] Create basic project structure.
 
