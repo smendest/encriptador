@@ -1,4 +1,4 @@
-# Encriptador web
+# Web encryptor
 
 Steps to follow:
 
