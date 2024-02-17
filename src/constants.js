@@ -1,3 +1,3 @@
-const STRINGS = {
+export const STRINGS = {
     TITLE: "Encriptador",
   }
