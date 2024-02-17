@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="styles.css">
   <title id="page-title"></title>
 </head>
@@ -12,8 +13,18 @@
 
   <h1 id="title"></h1>
 
-
-  <!-- <script src="src/constants.js"></script> -->
+  <section>
+    <div class="input-container">
+      <label for="text-area" id="text-area-label"></label>
+      <textarea id="text-area" cols="70" rows="10"></textarea>
+    </div>
+  
+    <div>
+      <p id="output-paragraph-label"></p>
+      <p id="output-paragraph"></p>
+    </div>
+    
+    </section>
   <script src="app.js" type="module"></script>
 </body>
 
