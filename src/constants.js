@@ -6,6 +6,8 @@ export const STRINGS = {
   TEST_TEXT: "Utilice JavaScript y todo lo que aprendio en las clases de logica de programacion para crear la funcion de encriptacion.",
   SECRET_MESSAGE: "fenterlimescimesdaidenters poberr enternfrenterntair enterstenter dentersaifimesober y haibenterrlober cobernclufatimesdober cobern enterximestober!",
   ATTENTION_MESSAGE: "Solo letras minúsculas y sin acentos",
+  ENCRYPT_BUTTON_LABEL: "Encriptar",
+  DECRYPT_BUTTON_LABEL: "Desencriptar",
 }
 
 export const ENCRYPTION_KEYS = {

@@ -1,19 +1,55 @@
 import { STRINGS } from "./src/constants.js";
 import { decrypt, encrypt } from "./src/utils.js";
 
-// Assign titles and strings
-document.getElementById('page-title').innerText = STRINGS.TITLE;
-document.getElementById('title').innerText = STRINGS.TITLE
-document.getElementById('text-area-label').innerText = STRINGS.TEXT_AREA;
+// Const and variables
+const pageTitleElement = document.getElementById('page-title');
+const titleElement = document.getElementById('title');
+const textAreaLabelElement = document.getElementById('text-area-label');
+const textAreaElement = document.getElementById('text-area');
+const outputParagraphLabelElement = document.getElementById('output-paragraph-label');
+const outputParagraphElement = document.getElementById('output-paragraph');
+const encryptButton = document.getElementById('encrypt-button');
+const decryptButton = document.getElementById('decrypt-button');
 
-const textArea = document.getElementById('text-area');
-textArea.placeholder = STRINGS.TEXT_AREA_PLACEHOLDER;
 
-document.getElementById('output-paragraph-label').innerHTML = STRINGS.OUTPUT_LABEL;
 
-const output = document.getElementById('output-paragraph');
+// Assign values and listen events
+function initialize() {
+  // Assign titles and strings
+  pageTitleElement.innerText = titleElement.innerText = STRINGS.TITLE;
+  textAreaLabelElement.innerText = STRINGS.TEXT_AREA;
+  textAreaElement.placeholder = STRINGS.TEXT_AREA_PLACEHOLDER;
+  outputParagraphLabelElement.innerHTML = STRINGS.OUTPUT_LABEL;
 
-// TODO: Get the input content to encrypt
+  // Assign buttons labels
+  encryptButton.innerHTML = STRINGS.ENCRYPT_BUTTON_LABEL;
+  decryptButton.innerHTML = STRINGS.DECRYPT_BUTTON_LABEL;
+
+  // Listen to button events
+  encryptButton.addEventListener("click", handleEncrypt);
+  decryptButton.addEventListener("click", handleDecrypt);
+}
+
+
+// Function to encrypt text from textarea
+function handleEncrypt() {
+  const inputText = textAreaElement.value;
+  const encryptedText = encrypt(inputText);
+  console.log(encryptedText);
+}
+
+
+function handleDecrypt() {
+  const inputText = textAreaElement.value;
+  const decryptedText = decrypt(inputText);
+  console.log(decryptedText);
+}
+
+
+// Initialize the app when the DOM is ready
+document.addEventListener("DOMContentLoaded", initialize);
+
+
 
 
 // console.log(decrypt(encrypt('Este todo masa mushu')))
