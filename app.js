@@ -10,7 +10,7 @@ const outputParagraphLabelElement = document.getElementById('output-paragraph-la
 const outputParagraphElement = document.getElementById('output-paragraph');
 const encryptButton = document.getElementById('encrypt-button');
 const decryptButton = document.getElementById('decrypt-button');
-
+const footerInfo = document.getElementById('footer-info');
 
 
 // Assign values and listen events
@@ -20,6 +20,7 @@ function initialize() {
   textAreaLabelElement.innerText = STRINGS.TEXT_AREA;
   textAreaElement.placeholder = STRINGS.TEXT_AREA_PLACEHOLDER;
   outputParagraphLabelElement.innerHTML = STRINGS.OUTPUT_LABEL;
+  footerInfo.innerHTML = STRINGS.FOOTER_INFO;
 
   // Assign buttons labels
   encryptButton.innerHTML = STRINGS.ENCRYPT_BUTTON_LABEL;
