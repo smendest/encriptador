@@ -8,6 +8,7 @@ export const STRINGS = {
   ATTENTION_MESSAGE: "Solo letras minúsculas y sin acentos",
   ENCRYPT_BUTTON_LABEL: "Encriptar",
   DECRYPT_BUTTON_LABEL: "Desencriptar",
+  COPY_BUTTON_LABEL: "Copiar",
   FOOTER_INFO: "Sebastian Mendes - Linkedin: /sebastian-mendes-tello"
 }
 

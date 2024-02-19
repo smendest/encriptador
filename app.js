@@ -10,6 +10,7 @@ const outputParagraphLabelElement = document.getElementById('output-paragraph-la
 const outputParagraphElement = document.getElementById('output-paragraph');
 const encryptButton = document.getElementById('encrypt-button');
 const decryptButton = document.getElementById('decrypt-button');
+const copyButton = document.getElementById('copy-button');
 const footerInfo = document.getElementById('footer-info');
 
 
@@ -25,10 +26,12 @@ function initialize() {
   // Assign buttons labels
   encryptButton.innerHTML = STRINGS.ENCRYPT_BUTTON_LABEL;
   decryptButton.innerHTML = STRINGS.DECRYPT_BUTTON_LABEL;
+  copyButton.innerHTML = STRINGS.COPY_BUTTON_LABEL;
 
   // Listen to button events
   encryptButton.addEventListener("click", handleEncrypt);
   decryptButton.addEventListener("click", handleDecrypt);
+  copyButton.addEventListener("click", handleCopy);
 }
 
 
@@ -45,11 +48,9 @@ function handleDecrypt() {
   outputParagraphElement.innerText = decryptedText;
 }
 
+function handleCopy() {
+
+}
 
 // Initialize the app when the DOM is ready
 document.addEventListener("DOMContentLoaded", initialize);
-
-
-
-
-// console.log(decrypt(encrypt('Este todo masa mushu')))
