@@ -1,4 +1,5 @@
 import { STRINGS } from "./src/constants.js";
+import { decrypt, encrypt } from "./src/utils.js";
 
 // Assign titles and strings
 document.getElementById('page-title').innerText = STRINGS.TITLE;
@@ -12,4 +13,7 @@ document.getElementById('output-paragraph-label').innerHTML = STRINGS.OUTPUT_LAB
 
 const output = document.getElementById('output-paragraph');
 
-// TODO: Get the input content and create the algotithm to encrypt and decrypt
+// TODO: Get the input content to encrypt
+
+
+// console.log(decrypt(encrypt('Este todo masa mushu')))
