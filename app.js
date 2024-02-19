@@ -31,18 +31,17 @@ function initialize() {
 }
 
 
-// Function to encrypt text from textarea
 function handleEncrypt() {
   const inputText = textAreaElement.value;
   const encryptedText = encrypt(inputText);
-  console.log(encryptedText);
+  outputParagraphElement.innerText = encryptedText;
 }
 
 
 function handleDecrypt() {
   const inputText = textAreaElement.value;
   const decryptedText = decrypt(inputText);
-  console.log(decryptedText);
+  outputParagraphElement.innerText = decryptedText;
 }
 
 
