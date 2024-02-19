@@ -32,6 +32,7 @@ function initialize() {
   encryptButton.addEventListener("click", handleEncrypt);
   decryptButton.addEventListener("click", handleDecrypt);
   copyButton.addEventListener("click", handleCopy);
+  copyButton.addEventListener("click", handleCopy);
 }
 
 
@@ -49,8 +50,22 @@ function handleDecrypt() {
 }
 
 function handleCopy() {
-
-}
+  // Verifyes if Clipboard API is available in the current browser
+  if (navigator.clipboard) {
+    // It copies the text from output paragraph to the clipboard
+    const textToCopy = outputParagraphElement.innerText;
+    navigator.clipboard.writeText(textToCopy)
+      .then(() => {
+        alert(STRINGS.CLIPBOARD_SUCC);
+      })
+      .catch(err => {
+        console.error(STRINGS.CLIPBOARD_ERR_1, err);
+        alert(STRINGS.CLIPBOARD_ERR_2);
+      });
+  } else {
+    alert(STRINGS.CLIPBOARD_API_NOT_AVAIL);
+  }
+};
 
 // Initialize the app when the DOM is ready
 document.addEventListener("DOMContentLoaded", initialize);

@@ -9,7 +9,11 @@ export const STRINGS = {
   ENCRYPT_BUTTON_LABEL: "Encriptar",
   DECRYPT_BUTTON_LABEL: "Desencriptar",
   COPY_BUTTON_LABEL: "Copiar",
-  FOOTER_INFO: "Sebastian Mendes - Linkedin: /sebastian-mendes-tello"
+  FOOTER_INFO: "Sebastian Mendes - Linkedin: /sebastian-mendes-tello",
+  CLIPBOARD_SUCC: "¡Texto copiado al portapapeles!",
+  CLIPBOARD_ERR_1: "Error al copiar el texto: ",
+  CLIPBOARD_ERR_2: "Hubo un error al intentar copiar el texto.",
+  CLIPBOARD_API_NOT_AVAIL: "La Clipboard API no está disponible en este navegador."
 }
 
 export const ENCRYPTION_KEYS = {
