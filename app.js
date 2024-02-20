@@ -6,6 +6,7 @@ const pageTitleElement = document.getElementById('page-title');
 const titleElement = document.getElementById('title');
 const textAreaLabelElement = document.getElementById('text-area-label');
 const textAreaElement = document.getElementById('text-area');
+const attentionMessageElement = document.getElementById('attention-message');
 const emptyOutputContent = document.getElementById('empty-output-container')
 const emptyOutputLabelElement = document.getElementById('empty-output-label');
 const emptyOutputDescElement = document.getElementById('empty-output-desc');
@@ -21,6 +22,7 @@ function initialize() {
   // Assign titles and strings
   pageTitleElement.innerText = titleElement.innerText = STRINGS.TITLE;
   textAreaLabelElement.innerText = STRINGS.TEXT_AREA;
+  attentionMessageElement.innerHTML = STRINGS.ATTENTION_MESSAGE;
   emptyOutputLabelElement.innerHTML = STRINGS.EMPTY_OUTPUT_LABEL_1;
   emptyOutputDescElement.innerHTML = STRINGS.EMPTY_OUTPUT_DESC;
   footerInfo.innerHTML = STRINGS.FOOTER_INFO;
