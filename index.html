@@ -14,19 +14,29 @@
   <h1 id="title"></h1>
 
   <section>
-    <div class="input-container">
-      <label for="text-area" id="text-area-label"></label>
-      <textarea id="text-area" cols="70" rows="10"></textarea>
+    <div class="main-content-container">
+      <div class="input-container">
+        <div class="input-container">
+          <label for="text-area" id="text-area-label"></label>
+          <textarea id="text-area"></textarea>
+        </div>
+        <div class="buttons-container">
+          <button id="encrypt-button" type="button"></button>
+          <button id="decrypt-button" type="button"></button>
+        </div>
+      </div>
+      <div class="output-container">
+        <div id="empty-output">
+          <img src="./src/assets/img/doll.png" alt="Waiting for the text" id="output-image">
+          <p id="empty-output-label"></p>
+          <p id="empty-output-desc"></p>
+        </div>
+        <p id="output-paragraph"></p>
+        <button id="copy-button" type="button"></button>
+      </div>
     </div>
 
-    <button id="encrypt-button" type="button"></button>
-    <button id="decrypt-button" type="button"></button>
-    <div>
-      <p id="output-paragraph-label"></p>
-      <p id="output-paragraph"></p>
-      <button id="copy-button" type="button"></button>
-    </div>
-    
+
   </section>
   <script src="app.js" type="module"></script>
 </body>

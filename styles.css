@@ -3,15 +3,28 @@
   --small-font-size: 10px;
   --medium-font-size: 15px;
   --large-font-size: 20px;
-/* Colors */
+  --border-radius:32px;
+  /* Colors */
   --dark-blue: #0A3871;
   --light-gray: #D8DFE8;
   --white: #FFFFFF;
   --primary-color: var(--dark-blue);
-  --secondary-color: var(var(--light-gray));
-  --thrid-color: var(var(--white));
+  --secondary-color: var(--light-gray);
+  --third-color: var(--white);
+  --background: #E8E8E8;
+  /* Paddings */
+  --padding-small:10px;
+  --padding-medium: 20px;
+  --padding-large: 30px;
+  --padding-extralarge: 60px;
 }
 
+body {
+  background-color: var(--background);
+  margin: 0 auto;
+  width: 90%;
+  color: var(--dark-blue);
+}
 h1 {
   display: block;
   font-size: 2em;
@@ -22,18 +35,110 @@ h1 {
   font-weight: bold;
 }
 
-/* 
-TODO => Read and use:
-* Flexbox: https://www.w3schools.com/css/css3_flexbox.asp
-* Responsive web design: https://www.w3schools.com/css/css_rwd_intro.asp
- */
-/* .input-container {
+.main-content-container {
   display: flex;
   flex-direction: column;
-  width: 40%;
-  margin-left: 20px;
-} */
+  justify-content: center;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-container textarea {
+  width: 100%;
+  flex-grow:1;
+  flex-shrink: 0;
+  /* height: 150px; */
+  padding: 12px 20px;
+  border-style: hidden;
+  border-radius: 4px;
+  background-color: transparent;
+  resize: none;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.output-container {
+  display: flex;
+  background-color: var(--third-color);
+  border: 2px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  justify-content: center;
+  align-items: center;
+  padding: 0 var(--padding-medium);
+
+}
+
+#empty-output {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#output-image {
+  display: none;
+  width:70%;
+}
+#copy-button {
+  display: none;
+}
 
 #text-area-label {
   display: block;
+}
+
+/* Responsive break-points */
+
+@media screen and (min-width:600px) {
+  /* For Tablets */
+
+  body {
+    width:80%
+  }
+
+  .main-content-container {
+    flex-direction: column;
+  }
+    
+  .buttons-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+}
+
+@media screen and (min-width:1080px) {
+  /* For Desktop*/
+
+  body {
+    width:70%;
+  }
+  .main-content-container {
+    flex-direction: row;
+    justify-content: center;
+    height: 50vh; 
+  }
+  
+  .input-container {
+    flex-direction: column;
+  }
+  
+  .buttons-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .output-container {
+    width:300px;
+  }
+
+  #output-image {
+    display:inherit;
+  }
 }

@@ -6,13 +6,14 @@ const pageTitleElement = document.getElementById('page-title');
 const titleElement = document.getElementById('title');
 const textAreaLabelElement = document.getElementById('text-area-label');
 const textAreaElement = document.getElementById('text-area');
-const outputParagraphLabelElement = document.getElementById('output-paragraph-label');
+const emptyOutputLabelElement = document.getElementById('empty-output-label');
+const emptyOutputDescElement = document.getElementById('empty-output-desc');
 const outputParagraphElement = document.getElementById('output-paragraph');
 const encryptButton = document.getElementById('encrypt-button');
 const decryptButton = document.getElementById('decrypt-button');
 const copyButton = document.getElementById('copy-button');
 const footerInfo = document.getElementById('footer-info');
-
+const emptyOutputContent = document.getElementById('empty-output')
 
 // Assign values and listen events
 function initialize() {
@@ -20,7 +21,8 @@ function initialize() {
   pageTitleElement.innerText = titleElement.innerText = STRINGS.TITLE;
   textAreaLabelElement.innerText = STRINGS.TEXT_AREA;
   textAreaElement.placeholder = STRINGS.TEXT_AREA_PLACEHOLDER;
-  outputParagraphLabelElement.innerHTML = STRINGS.OUTPUT_LABEL;
+  emptyOutputLabelElement.innerHTML = STRINGS.EMPTY_OUTPUT_LABEL_1;
+  emptyOutputDescElement.innerHTML = STRINGS.EMPTY_OUTPUT_DESC;
   footerInfo.innerHTML = STRINGS.FOOTER_INFO;
 
   // Assign buttons labels
@@ -40,6 +42,8 @@ function handleEncrypt() {
   const inputText = textAreaElement.value;
   const encryptedText = encrypt(inputText);
   outputParagraphElement.innerText = encryptedText;
+  emptyOutputContent.style.display = "none";
+  copyButton.style.display = "inherit";
 }
 
 
@@ -47,6 +51,9 @@ function handleDecrypt() {
   const inputText = textAreaElement.value;
   const decryptedText = decrypt(inputText);
   outputParagraphElement.innerText = decryptedText;
+  emptyOutputContent.style.display = "none";
+  copyButton.style.display = "inherit";
+
 }
 
 function handleCopy() {
