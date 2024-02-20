@@ -3,7 +3,7 @@
   --small-font-size: 10px;
   --medium-font-size: 15px;
   --large-font-size: 20px;
-  --border-radius:32px;
+  --border-radius: 32px;
   /* Colors */
   --dark-blue: #0A3871;
   --light-gray: #D8DFE8;
@@ -14,7 +14,7 @@
   --third-color: var(--white);
   --background: #E8E8E8;
   /* Paddings */
-  --padding-small:10px;
+  --padding-small: 10px;
   --padding-medium: 20px;
   --padding-large: 30px;
   --padding-extralarge: 60px;
@@ -26,6 +26,7 @@ body {
   width: 90%;
   color: var(--dark-blue);
 }
+
 h1 {
   display: block;
   font-size: 2em;
@@ -45,7 +46,8 @@ h1 {
 }
 
 
-.input-container, .input-and-buttons-container {
+.input-container,
+.input-and-buttons-container {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -86,9 +88,10 @@ h1 {
 
 #output-image {
   display: none;
-  width:70%;
+  width: 100%;
   margin-bottom: var(--padding-medium);
 }
+
 #copy-button {
   display: none;
 }
@@ -125,24 +128,25 @@ footer #contact {
 
 #text-area-label {
   font-size: x-large;
+  font-weight: bold;
   padding: var(--padding-medium)
 }
 
 #empty-output-label {
-  color:black;
+  color: black;
   font-size: larger;
   font-weight: bold;
   padding-bottom: var(--padding-small);
 }
 
 #empty-output-desc {
-  color:var(--gray-400);
+  color: var(--gray-400);
   font-size: small;
 }
 
 #attention-message {
   color: var(--gray-400);
-  font-size:small;
+  font-size: small;
   display: inline;
 }
 
@@ -154,13 +158,13 @@ footer #contact {
   /* For Tablets */
 
   body {
-    width:80%
+    width: 80%
   }
 
   .main-content-container {
     flex-direction: column;
   }
-    
+
   .buttons-container {
     flex-direction: row;
     justify-content: center;
@@ -172,25 +176,28 @@ footer #contact {
   /* For Desktop*/
 
   body {
-    width:70%;
+    width: 70%;
   }
+
   .main-content-container {
     flex-direction: row;
     justify-content: center;
-    height: 50vh; 
+    height: 50vh;
   }
-  
+
   .buttons-container {
     flex-direction: row;
     justify-content: center;
   }
+
   .output-container {
-    width:300px;
+    width: 300px;
   }
 
   #output-image {
-    display:inherit;
+    display: inherit;
   }
+
   footer p {
     display: inline;
   }
