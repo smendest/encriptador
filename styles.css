@@ -92,6 +92,26 @@ h1 {
   display: block;
 }
 
+
+footer {
+  margin-top: 10vh;
+  border-top: 2px solid var(--primary-color);
+  padding: var(--padding-large);
+}
+
+footer #footer-info {
+  margin-right: var(--padding-medium);
+  margin-bottom: var(--padding-small);
+}
+
+footer img {
+  margin-bottom: -5px;
+}
+
+footer #contact {
+  display: inline;
+}
+
 /* Responsive break-points */
 
 @media screen and (min-width:600px) {
@@ -138,5 +158,8 @@ h1 {
 
   #output-image {
     display:inherit;
+  }
+  footer p {
+    display: inline;
   }
 }

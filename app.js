@@ -14,6 +14,7 @@ const encryptButton = document.getElementById('encrypt-button');
 const decryptButton = document.getElementById('decrypt-button');
 const copyButton = document.getElementById('copy-button');
 const footerInfo = document.getElementById('footer-info');
+const contactInfo = document.getElementById('contact');
 
 // Assign values and listen events
 function initialize() {
@@ -23,6 +24,8 @@ function initialize() {
   emptyOutputLabelElement.innerHTML = STRINGS.EMPTY_OUTPUT_LABEL_1;
   emptyOutputDescElement.innerHTML = STRINGS.EMPTY_OUTPUT_DESC;
   footerInfo.innerHTML = STRINGS.FOOTER_INFO;
+  contactInfo.innerHTML = STRINGS.CONTACT_INFO;
+  contactInfo.href = STRINGS.CONTACT_URL;
 
   // Assign buttons labels
   encryptButton.innerHTML = STRINGS.ENCRYPT_BUTTON_LABEL;
