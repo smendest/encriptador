@@ -1,8 +1,8 @@
 /* Style constants defined */
 :root {
-  --small-font-size: 10px;
-  --medium-font-size: 15px;
-  --large-font-size: 20px;
+  --small-font-size: 16px;
+  --medium-font-size: 24px;
+  --large-font-size: 32px;
   --border-radius: 32px;
   /* Colors */
   --dark-blue: #0A3871;
@@ -25,11 +25,12 @@ body {
   margin: 0 auto;
   width: 90%;
   color: var(--dark-blue);
+  font-size:var(--small-font-size);
 }
 
 h1 {
   display: block;
-  font-size: 2em;
+  font-size: 2.5em;
   margin-block-start: 0.67em;
   margin-block-end: 0.67em;
   margin-inline-start: 0px;
@@ -96,10 +97,6 @@ h1 {
   display: none;
 }
 
-#text-area-label {
-  display: block;
-}
-
 .attention img {
   margin-bottom: -3px;
 }
@@ -127,14 +124,15 @@ footer #contact {
 /* Fonts */
 
 #text-area-label {
-  font-size: x-large;
+  display: block;
+  font-size: var(--large-font-size);
   font-weight: bold;
-  padding: var(--padding-medium)
+  padding: var(--padding-medium);
 }
 
 #empty-output-label {
   color: black;
-  font-size: larger;
+  font-size: var(--medium-font-size);
   font-weight: bold;
   padding-bottom: var(--padding-small);
 }
