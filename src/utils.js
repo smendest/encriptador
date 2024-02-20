@@ -1,8 +1,4 @@
-import { ENCRYPTION_KEYS, encrypting_regex, decrypting_regex } from "./constants.js";
-
-
-// =======================================================================================
-/**Encription Algorithms */
+import { ENCRYPTION_KEYS, encrypting_regex, decrypting_regex, STRINGS } from "./constants.js";
 
 
 
@@ -10,7 +6,6 @@ import { ENCRYPTION_KEYS, encrypting_regex, decrypting_regex } from "./constants
 Requirements:
 * Must work only with lowercase letters.
 * No letters with accents or special characters should be used.
-* It must be possible to convert a word for the encrypted version and also return an encrypted word for its original version.
 */
 export function encrypt(text) {
 
@@ -41,5 +36,20 @@ export function decrypt(text) {
 
 }
 
-// End of encryption algorithms
-// =======================================================================================
+export function copyToClipboard() {
+  // Verifyes if Clipboard API is available in the current browser
+  if (navigator.clipboard) {
+    // It copies the text from output paragraph to the clipboard
+    const textToCopy = outputParagraphElement.innerText;
+    navigator.clipboard.writeText(textToCopy)
+      .then(() => {
+        alert(STRINGS.CLIPBOARD_SUCC);
+      })
+      .catch(err => {
+        console.error(STRINGS.CLIPBOARD_ERR_1, err);
+        alert(STRINGS.CLIPBOARD_ERR_2);
+      });
+  } else {
+    alert(STRINGS.CLIPBOARD_API_NOT_AVAIL);
+  }
+}
