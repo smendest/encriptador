@@ -6,6 +6,7 @@ const pageTitleElement = document.getElementById('page-title');
 const titleElement = document.getElementById('title');
 const textAreaLabelElement = document.getElementById('text-area-label');
 const textAreaElement = document.getElementById('text-area');
+const emptyOutputContent = document.getElementById('empty-output-container')
 const emptyOutputLabelElement = document.getElementById('empty-output-label');
 const emptyOutputDescElement = document.getElementById('empty-output-desc');
 const outputParagraphElement = document.getElementById('output-paragraph');
@@ -13,14 +14,12 @@ const encryptButton = document.getElementById('encrypt-button');
 const decryptButton = document.getElementById('decrypt-button');
 const copyButton = document.getElementById('copy-button');
 const footerInfo = document.getElementById('footer-info');
-const emptyOutputContent = document.getElementById('empty-output')
 
 // Assign values and listen events
 function initialize() {
   // Assign titles and strings
   pageTitleElement.innerText = titleElement.innerText = STRINGS.TITLE;
   textAreaLabelElement.innerText = STRINGS.TEXT_AREA;
-  textAreaElement.placeholder = STRINGS.TEXT_AREA_PLACEHOLDER;
   emptyOutputLabelElement.innerHTML = STRINGS.EMPTY_OUTPUT_LABEL_1;
   emptyOutputDescElement.innerHTML = STRINGS.EMPTY_OUTPUT_DESC;
   footerInfo.innerHTML = STRINGS.FOOTER_INFO;
