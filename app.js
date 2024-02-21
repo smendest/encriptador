@@ -7,13 +7,14 @@ const titleElement = document.getElementById('title');
 const textAreaLabelElement = document.getElementById('text-area-label');
 const textAreaElement = document.getElementById('text-area');
 const attentionMessageElement = document.getElementById('attention-message');
-const emptyOutputContent = document.getElementById('empty-output-container')
+const emptyOutputContentContainer = document.getElementById('empty-output-container')
 const emptyOutputLabelElement = document.getElementById('empty-output-label');
 const emptyOutputDescElement = document.getElementById('empty-output-desc');
 const outputParagraphElement = document.getElementById('output-paragraph');
-const encryptButton = document.getElementById('encrypt-button');
-const decryptButton = document.getElementById('decrypt-button');
-const copyButton = document.getElementById('copy-button');
+const encryptButtonElement = document.getElementById('encrypt-button');
+const decryptButtonElement = document.getElementById('decrypt-button');
+const copyButtonElement = document.getElementById('copy-button');
+const resultsContainer = document.getElementById('results');
 const footerInfo = document.getElementById('footer-info');
 const contactInfo = document.getElementById('contact');
 
@@ -30,24 +31,27 @@ function initialize() {
   contactInfo.href = STRINGS.CONTACT_URL;
 
   // Assign buttons labels
-  encryptButton.innerHTML = STRINGS.ENCRYPT_BUTTON_LABEL;
-  decryptButton.innerHTML = STRINGS.DECRYPT_BUTTON_LABEL;
-  copyButton.innerHTML = STRINGS.COPY_BUTTON_LABEL;
+  encryptButtonElement.innerHTML = STRINGS.ENCRYPT_BUTTON_LABEL;
+  decryptButtonElement.innerHTML = STRINGS.DECRYPT_BUTTON_LABEL;
+  copyButtonElement.innerHTML = STRINGS.COPY_BUTTON_LABEL;
 
   // Listen to button events
-  encryptButton.addEventListener("click", handleEncrypt);
-  decryptButton.addEventListener("click", handleDecrypt);
-  copyButton.addEventListener("click", handleCopy);
-  copyButton.addEventListener("click", handleCopy);
+  encryptButtonElement.addEventListener("click", handleEncrypt);
+  decryptButtonElement.addEventListener("click", handleDecrypt);
+  copyButtonElement.addEventListener("click", handleCopy);
 }
 
+function showResults () {
+  resultsContainer.style.display = "flex";
+  resultsContainer.style.padding = "var(--padding-xl) 0";
+}
 
 function handleEncrypt() {
   const inputText = textAreaElement.value;
   const encryptedText = encrypt(inputText);
   outputParagraphElement.innerText = encryptedText;
-  emptyOutputContent.style.display = "none";
-  copyButton.style.display = "inherit";
+  emptyOutputContentContainer.style.display = "none";
+  showResults();
 }
 
 
@@ -55,9 +59,8 @@ function handleDecrypt() {
   const inputText = textAreaElement.value;
   const decryptedText = decrypt(inputText);
   outputParagraphElement.innerText = decryptedText;
-  emptyOutputContent.style.display = "none";
-  copyButton.style.display = "inherit";
-
+  emptyOutputContentContainer.style.display = "none";
+  showResults();
 }
 
 function handleCopy() {

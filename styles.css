@@ -1,10 +1,10 @@
 /* Style constants defined */
 :root {
   --font-xxs: 12px;
-  --font-xs: 16px;
+  --font-xs: 14px;
   --font-s: 16px;
-  --font-m: 22px;
-  --font-l: 28px;
+  --font-m: 20px;
+  --font-l: 26px;
   --font-xl: 32px;
   --border-radius: 32px;
   /* Colors */
@@ -48,7 +48,7 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 70vh;
+  height: 90vh;
 }
 
 
@@ -59,7 +59,7 @@ h1 {
   height: 100%;
   width: 100%;
   margin-bottom: var(--padding-m);
-  
+
 }
 
 .input-and-buttons-container {
@@ -80,14 +80,37 @@ h1 {
   justify-content: center;
 }
 
+.button {
+  font-size:var(--font-s);
+  border-radius: 24px;
+  border: 1px solid var(--primary-color);
+  height: 8.5vh;
+  background-color: transparent;
+  color:var(--primary-color);
+}
+
+#encrypt-button {
+  margin-bottom:var(--padding-m);
+  background-color: var(--primary-color);
+  color:var(--white);
+}
+
 .output-container {
   display: flex;
+  flex-direction: column;
   background-color: var(--third-color);
   border-radius: var(--border-radius);
   justify-content: center;
-  align-items: center;
   padding: 0 var(--padding-m);
 
+}
+
+#results {
+  display: none;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  /* margin: var(--padding-xl) 0; */
 }
 
 #empty-output-container {
@@ -105,7 +128,7 @@ h1 {
 }
 
 #copy-button {
-  display: none;
+  display: inline-block;
 }
 
 .attention img {
@@ -198,9 +221,22 @@ footer #contact {
     height: 50vh;
   }
 
+  .input-and-buttons-container{
+    padding-right: var(--padding-s);
+  }
+
   .buttons-container {
     flex-direction: row;
-    justify-content: center;
+    justify-content:space-around;
+  }
+
+  .button {
+    flex-grow:1;
+    height: 5.5vh;
+  }
+
+  #encrypt-button, #decrypt-button {
+    margin: auto var(--padding-m);
   }
 
   .output-container {

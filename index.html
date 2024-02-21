@@ -28,8 +28,10 @@
           </div>
         </div>
         <div class="buttons-container">
-          <button id="encrypt-button" type="button"></button>
-          <button id="decrypt-button" type="button"></button>
+          <button class="button" id="encrypt-button" type="button"></button>
+          <button class="button" id="decrypt-button" type="button"></button>
+          <!-- <button class="button" id="copy-button" type="button"></button> -->
+
         </div>
       </div>
       <div class="output-container">
@@ -38,8 +40,12 @@
           <p id="empty-output-label"></p>
           <p id="empty-output-desc"></p>
         </div>
-        <p id="output-paragraph"></p>
-        <button id="copy-button" type="button"></button>
+        <div id="results">
+          <p id="output-paragraph"></p>
+          <div class="buttons-container" id="copy-button-container">
+            <button class="button" id="copy-button" type="button"></button>
+          </div>
+        </div>
       </div>
     </div>
 
