@@ -29,6 +29,7 @@ body {
   width: 90%;
   color: var(--dark-blue);
   font-size:var(--font-s);
+  font-family: "Inter", sans-serif;
 }
 
 h1 {
@@ -114,7 +115,7 @@ h1 {
 
 footer {
   margin-top: 10vh;
-  border-top: 2px solid var(--primary-color);
+  border-top: 1px solid var(--primary-color);
   padding: var(--padding-l);
 }
 
@@ -136,7 +137,6 @@ footer #contact {
 #text-area-label {
   display: block;
   font-size: var(--font-l);
-  font-weight: bold;
   padding: var(--padding-m);
 }
 
