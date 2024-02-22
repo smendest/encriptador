@@ -11,9 +11,9 @@ La aplicación posee un diseño responsivo que varía entre Mobile, Tablet y Des
 
 **Sebastián Mendes Tello**
           
-          └──> [![Static Badge](https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white&color=%23181717)](https://github.com/smendest)
+[![Static Badge](https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white&color=%23181717)](https://github.com/smendest)
           
-          └──> [![Static Badge](https://img.shields.io/badge/linkedin-%230A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sebastian-mendes-tello)
+[![Static Badge](https://img.shields.io/badge/linkedin-%230A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sebastian-mendes-tello)
 
 
 
