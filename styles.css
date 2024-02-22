@@ -87,6 +87,7 @@ h1 {
   height: 8.5vh;
   background-color: transparent;
   color:var(--primary-color);
+  flex-grow: 1;
 }
 
 #encrypt-button {
@@ -134,6 +135,7 @@ h1 {
 
 #copy-button {
   display: inline-block;
+  margin-top: var(--padding-xl);
 }
 
 .attention img {
@@ -204,7 +206,15 @@ footer #contact {
 
   .buttons-container {
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
+  }
+
+  .button {
+    height: 5.5vh;
+  }
+
+  #encrypt-button, #decrypt-button {
+    margin: auto var(--padding-m);
   }
 
   #empty-output-container {
@@ -236,7 +246,6 @@ footer #contact {
   }
 
   .button {
-    flex-grow:1;
     height: 5.5vh;
   }
 
