@@ -64,7 +64,7 @@ function handleDecrypt() {
 }
 
 function handleCopy() {
-  copyToClipboard();
+  copyToClipboard(outputParagraphElement);
 };
 
 // Initialize the app when the DOM is ready

@@ -36,11 +36,11 @@ export function decrypt(text) {
 
 }
 
-export function copyToClipboard() {
+export function copyToClipboard(textElement) {
   // Verifyes if Clipboard API is available in the current browser
   if (navigator.clipboard) {
     // It copies the text from output paragraph to the clipboard
-    const textToCopy = outputParagraphElement.innerText;
+    const textToCopy = textElement.innerText;
     navigator.clipboard.writeText(textToCopy)
       .then(() => {
         alert(STRINGS.CLIPBOARD_SUCC);
