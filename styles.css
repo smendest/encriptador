@@ -113,6 +113,11 @@ h1 {
   /* margin: var(--padding-xl) 0; */
 }
 
+#output-paragraph {
+  overflow-wrap: break-word; 
+}
+
+
 #empty-output-container {
   display: flex;
   flex-direction: column;
